@@ -1,0 +1,44 @@
+/* The full-width bar sitting at the top */
+.navbar {
+  display: flex;                /* places children side by side */
+  justify-content: space-between; /* logo on left, links on right */
+  align-items: center;          /* vertically centers everything */
+  padding: 16px 40px;           /* top-bottom | left-right breathing room */
+  background-color: #ff85a1;   /* main pink */
+  position: sticky;             /* stays at top when you scroll */
+  top: 0;                       /* sticks to the very top of screen */
+  z-index: 100;                 /* sits above all other elements */
+  box-shadow: 0 2px 8px rgba(255, 105, 135, 0.3); /* soft pink shadow below */
+}
+
+/* Your name on the left */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  font-family: 'Playfair Display', serif; /* elegant name styling */
+  letter-spacing: 1px;
+}
+
+/* The <ul> — remove default bullet points and margin */
+.navbar-links {
+  list-style: none;   /* removes bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex;      /* makes list items sit side by side */
+  gap: 20px;          /* space between each link */
+}
+
+/* Each link */
+.navbar-links a {
+  text-decoration: none;  /* removes underline */
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s; /* smooth color change on hover */
+}
+
+/* When you hover over a link */
+.navbar-links a:hover {
+  color: #4d0020;   /* deep dark pink on hover */
+}

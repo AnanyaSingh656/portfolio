@@ -1,0 +1,145 @@
+.education {
+  background-color: #fff0f5;
+}
+
+/* the whole vertical timeline */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;                 /* no gap — line connects them */
+  max-width: 800px;
+  margin: 0 auto;         /* centers the timeline on the page */
+}
+
+/* one row = icon column + card column */
+.timeline-item {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* ── LEFT COLUMN — icon + connecting line ── */
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;         /* never shrinks */
+}
+
+/* the circle with the icon inside */
+.timeline-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+/* university gets a stronger pink */
+.timeline-icon.university {
+  background-color: #e63970;
+  color: white;
+  box-shadow: 0 4px 14px rgba(230, 57, 112, 0.35);
+}
+
+/* schools get a softer pink */
+.timeline-icon.school {
+  background-color: #ffc2d4;
+  color: #4d0020;
+}
+
+/* the vertical line connecting items */
+.timeline-line {
+  width: 2px;
+  flex: 1;                /* stretches to fill the space between items */
+  min-height: 40px;
+  background: linear-gradient(to bottom, #e63970, #ffc2d4);
+  margin: 6px 0;
+}
+
+/* ── RIGHT COLUMN — the card ── */
+.timeline-card {
+  flex: 1;
+  background: white;
+  border: 1px solid #ffc2d4;
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin-bottom: 32px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-card:hover {
+  transform: translateX(6px);   /* slides right on hover */
+  box-shadow: 0 8px 24px rgba(230, 57, 112, 0.12);
+}
+
+/* university card gets a left accent border */
+.timeline-card.university {
+  border-left: 4px solid #e63970;
+}
+
+.timeline-card.school {
+  border-left: 4px solid #ffc2d4;
+}
+
+/* top row — name + badge */
+.timeline-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.institution-name {
+  font-size: 1.05rem;
+  color: #4d0020;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+}
+
+/* pursuing / completed badge */
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;    /* stops badge from wrapping to two lines */
+  flex-shrink: 0;
+}
+
+.status-badge.pursuing {
+  background-color: #d4edda;
+  color: #155724;         /* green — actively studying */
+}
+
+.status-badge.completed {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.degree-name {
+  font-size: 0.92rem;
+  color: #e63970;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+/* bottom row — grade + year */
+.timeline-card-footer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.edu-grade,
+.edu-year {
+  font-size: 0.88rem;
+  color: #555;
+  font-weight: 500;
+}

@@ -1,0 +1,87 @@
+.skills {
+  background-color: #fff0f5;  /* alternating background from About */
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  margin-top: -20px;          /* pulls it closer to the title */
+  margin-bottom: 50px;
+}
+
+/* Outer grid — category cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 28px;
+}
+
+/* Each category card */
+.skill-category-card {
+  background: white;
+  border: 1px solid #ffc2d4;
+  border-radius: 20px;
+  padding: 28px 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(230, 57, 112, 0.13);
+}
+
+/* Category heading — emoji + title */
+.category-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4d0020;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  border-bottom: 2px solid #ffc2d4;  /* soft pink underline */
+  padding-bottom: 12px;
+}
+
+/* Inner grid of individual skill items */
+.skill-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 icons per row inside card */
+  gap: 16px;
+}
+
+/* Single icon + label block */
+.skill-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 6px;
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.2s;
+  cursor: default;
+}
+
+.skill-icon-item:hover {
+  background: #fff0f5;
+  transform: translateY(-3px);
+}
+
+/* The icon itself */
+.skill-icon {
+  font-size: 2rem;      /* controls icon size */
+  color: #e63970;       /* all icons get the main pink */
+  display: flex;        /* centers SVG inside span */
+  align-items: center;
+}
+
+/* Skill name below the icon */
+.skill-name {
+  font-size: 0.75rem;
+  color: #555;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.3;
+}

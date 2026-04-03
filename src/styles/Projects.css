@@ -1,0 +1,146 @@
+.projects {
+  background-color: #fff0f5;
+}
+
+/* 3 cards per row */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* each card */
+.project-card {
+  background: white;
+  border: 1px solid #ffc2d4;
+  border-radius: 20px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(230, 57, 112, 0.13);
+}
+
+/* status badge */
+.project-status {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.project-status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.project-status.inprogress {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.project-status.comingsoon {
+  background: #f0f0f0;
+  color: #888;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  color: #4d0020;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+  /* leave space so title doesn't go under badge */
+  padding-right: 90px;
+}
+
+.project-desc {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* my role text */
+.project-contribution {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  background: #fff0f5;
+  border-left: 3px solid #e63970;
+  padding: 8px 12px;
+  border-radius: 0 8px 8px 0;
+}
+
+.project-contribution span {
+  color: #e63970;
+  font-weight: 600;
+}
+
+/* tech stack chips */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;   /* wraps to next line if too many chips */
+  gap: 8px;
+}
+
+.tech-chip {
+  background: #fff0f5;
+  border: 1px solid #ffc2d4;
+  color: #e63970;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* github and demo links */
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;  /* pushes links to the bottom of the card */
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e63970;
+  text-decoration: none;
+  border: 2px solid #e63970;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.project-link:hover {
+  background: #e63970;
+  color: white;
+}
+
+.project-link.demo {
+  background: #e63970;
+  color: white;
+}
+
+.project-link.demo:hover {
+  background: #4d0020;
+  border-color: #4d0020;
+}
+
+.project-link-placeholder {
+  font-size: 0.82rem;
+  color: #aaa;
+  font-style: italic;
+}

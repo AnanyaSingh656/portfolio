@@ -1,0 +1,82 @@
+.achievements {
+  background-color: white;
+}
+
+/* 3 cards per row */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* each card */
+.achievement-card {
+  background: #fff0f5;
+  border: 1px solid #ffc2d4;
+  border-radius: 20px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;    /* needed for year badge positioning */
+}
+
+.achievement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(230, 57, 112, 0.13);
+}
+
+/* gold cards get a slightly warm border */
+.achievement-card.gold {
+  border-color: #f4c542;
+}
+
+/* ── ICON CIRCLE ── */
+.achievement-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.achievement-icon.gold {
+  background-color: #fff3cd;
+  color: #c9960c;       /* warm gold */
+}
+
+.achievement-icon.pink {
+  background-color: #ffc2d4;
+  color: #e63970;
+}
+
+/* year badge — sits at top right of card */
+.achievement-year {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #e63970;
+  background: white;
+  border: 1px solid #ffc2d4;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.achievement-title {
+  font-size: 0.97rem;
+  color: #4d0020;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+}
+
+.achievement-desc {
+  font-size: 0.87rem;
+  color: #666;
+  line-height: 1.7;
+}

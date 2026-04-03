@@ -1,0 +1,114 @@
+.contact {
+  background-color: white;
+}
+
+/* two columns side by side */
+.contact-container {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* ── LEFT ── */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-intro {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: #fff0f5;
+  border-radius: 12px;
+  border: 1px solid #ffc2d4;
+  transition: transform 0.2s;
+}
+
+.contact-detail-item:hover {
+  transform: translateX(5px);  /* slides right on hover — subtle and fun */
+}
+
+.contact-detail-icon {
+  font-size: 1.4rem;
+  margin-top: 2px;
+}
+
+.contact-detail-item h4 {
+  font-size: 0.85rem;
+  color: #e63970;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-detail-item p {
+  font-size: 0.92rem;
+  color: #555;
+}
+
+/* ── RIGHT — FORM ── */
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* each label + input pair */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #4d0020;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+/* shared styles for input and textarea */
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #ffc2d4;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;       /* removes default browser outline */
+  resize: none;        /* stops textarea from being resizable */
+}
+
+/* pink glow when focused */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #e63970;
+  box-shadow: 0 0 0 3px rgba(230, 57, 112, 0.1);
+}
+
+.contact-btn {
+  align-self: flex-start;  /* button doesn't stretch full width */
+  margin-top: 4px;
+}

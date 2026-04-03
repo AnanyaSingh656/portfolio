@@ -1,0 +1,152 @@
+.about {
+  background-color: white;
+}
+
+/* ── TOP SECTION — photo + intro ── */
+.about-top {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+/* ── PHOTO ── */
+.about-image-box {
+  position: relative;   /* lets the blob be positioned relative to this */
+  flex-shrink: 0;
+  width: 240px;
+  height: 280px;
+}
+
+.about-photo {
+  width: 240px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;           /* sits above the blob */
+  box-shadow: 0 10px 30px rgba(230, 57, 112, 0.2);
+}
+
+/* soft decorative shape sitting behind the photo */
+.about-image-blob {
+  position: absolute;
+  width: 240px;
+  height: 280px;
+  background-color: #ffc2d4;  /* soft pink */
+  border-radius: 30px;
+  top: 14px;
+  left: 14px;             /* offset to the right and down — creates depth */
+  z-index: 1;             /* sits behind photo */
+}
+
+/* ── INTRO TEXT ── */
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-tagline {
+  font-size: 1.2rem;
+  color: #2d2d2d;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* highlights your name */
+.about-tagline span {
+  color: #e63970;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.about-para {
+  font-size: 0.97rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* quote block */
+.about-quote {
+  background: #fff0f5;
+  border-left: 4px solid #e63970;   /* strong pink left bar */
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.about-quote p {
+  font-size: 0.95rem;
+  color: #4d0020;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.about-quote span {
+  font-size: 0.85rem;
+  color: #e63970;
+  font-weight: 600;
+}
+
+.quote-icon {
+  font-size: 1.3rem;
+  color: #e63970;
+}
+
+/* ── BOTTOM CARDS GRID ── */
+.about-cards {
+  display: grid;
+  /* 3 equal columns — auto-fit makes it responsive later */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.about-card {
+  display: flex;
+  align-items: flex-start;    /* icon and text align to top */
+  gap: 16px;
+  background: #fff0f5;
+  border: 1px solid #ffc2d4;
+  border-radius: 16px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* lifts the card up slightly on hover */
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(230, 57, 112, 0.12);
+}
+
+.card-icon {
+  font-size: 1.6rem;
+  color: #e63970;
+  margin-top: 2px;
+  flex-shrink: 0;   /* stops icon from shrinking */
+}
+
+.about-card h4 {
+  font-size: 0.95rem;
+  color: #4d0020;
+  margin-bottom: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.about-card p {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* centers the resume button */
+.about-resume {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
