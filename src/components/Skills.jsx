@@ -11,13 +11,17 @@ import {
   SiPython, SiC, SiCplusplus, SiOpenjdk,
   SiGit, SiGithub, SiFigma,
   SiJupyter, SiGooglecolab, SiNpm,
-  SiNodedotjs
+  SiNodedotjs,
+  SiExpress,       // new — Express.js icon
+  SiPostgresql,    // new — PostgreSQL icon
+  SiRender,        // new — Render icon
+  SiVercel,        // new — Vercel icon
+  SiNetlify,   // new — Netlify icon
 } from 'react-icons/si';
 import { VscTerminalCmd, VscVscode } from 'react-icons/vsc';
-import { FaRobot, FaBrain, FaMobileAlt } from 'react-icons/fa';
-
-import { HiLightBulb, HiFlag, HiKey, HiLink } from "react-icons/hi"; //for prob solving, leadership, teamwork, adaptability
-import { AiFillAudio } from "react-icons/ai"; //for public speaking
+import { FaRobot, FaBrain, FaMobileAlt, FaServer, FaEnvelope } from 'react-icons/fa'; // new — FaServer for REST API
+import { HiLightBulb, HiFlag, HiKey, HiLink } from "react-icons/hi";
+import { AiFillAudio } from "react-icons/ai";
 
 
 // Each category is an object with a title, emoji, and array of skills
@@ -27,9 +31,9 @@ const skillCategories = [
     title: 'Frontend Development',
     emoji: '🚀',
     skills: [
-      { name: 'HTML',             icon: <SiHtml5 /> },
-      { name: 'CSS',              icon: <SiCss /> },
-      { name: 'JavaScript',   icon: <SiJavascript /> },
+      { name: 'HTML',              icon: <SiHtml5 /> },
+      { name: 'CSS',               icon: <SiCss /> },
+      { name: 'JavaScript',        icon: <SiJavascript /> },
       { name: 'React.js',          icon: <SiReact /> },
       { name: 'Responsive Design', icon: <FaMobileAlt /> },
     ]
@@ -38,11 +42,11 @@ const skillCategories = [
     title: 'Programming & Core CS',
     emoji: '⚙️',
     skills: [
-      { name: 'Java',    icon: <SiOpenjdk /> },
-      { name: 'C',       icon: <SiC /> },
-      { name: 'C++',     icon: <SiCplusplus /> },
-      { name: 'Python',  icon: <SiPython /> },
-      { name: 'DSA',     icon: <VscTerminalCmd /> },
+      { name: 'Java',   icon: <SiOpenjdk /> },
+      { name: 'C',      icon: <SiC /> },
+      { name: 'C++',    icon: <SiCplusplus /> },
+      { name: 'Python', icon: <SiPython /> },
+      { name: 'DSA',    icon: <VscTerminalCmd /> },
     ]
   },
   {
@@ -58,33 +62,51 @@ const skillCategories = [
     title: 'Tools & Technologies',
     emoji: '🛠️',
     skills: [
-      { name: 'Git',            icon: <SiGit /> },
-      { name: 'GitHub',         icon: <SiGithub /> },
-      { name: 'VS Code',        icon: <VscVscode /> },
-      { name: 'Figma',          icon: <SiFigma /> },
-      { name: 'Jupyter',        icon: <SiJupyter /> },
-      { name: 'Google Colab',   icon: <SiGooglecolab /> },
-      { name: 'npm',            icon: <SiNpm /> },
+      { name: 'Git',          icon: <SiGit /> },
+      { name: 'GitHub',       icon: <SiGithub /> },
+      { name: 'VS Code',      icon: <VscVscode /> },
+      { name: 'Google Colab', icon: <SiGooglecolab /> },
+      { name: 'Jupyter',      icon: <SiJupyter /> },
+      { name: 'npm',          icon: <SiNpm /> }, // new — deployment tools learned from bulletin board project
+      { name: 'Vercel',       icon: <SiVercel /> },
+      { name: 'Render',       icon: <SiRender /> },
+      { name: 'Netlify',  icon: <SiNetlify /> },  // new
+      { name: 'EmailJS', icon: <FaEnvelope /> },  // envelope icon for EmailJS
+      { name: 'Figma',        icon: <SiFigma /> },
     ]
   },
   {
-    title: 'Currently Learning',
+    // new category — backend skills learned from bulletin board project
+    title: 'Backend Development',
+    emoji: '🖥️',
+    skills: [
+      { name: 'Node.js',    icon: <SiNodedotjs /> },
+      { name: 'Express.js', icon: <SiExpress /> },
+      { name: 'REST APIs',  icon: <FaServer /> },     // GET, POST, PATCH, DELETE
+      { name: 'PostgreSQL', icon: <SiPostgresql /> }, // relational database
+    ]
+  },
+  {
+    title: 'Currently Strengthening/Learning',
     emoji: '🌱',
     skills: [
       { name: 'Advanced React', icon: <SiReact /> },
-      { name: 'Node.js',        icon: <SiNodedotjs /> },
-      { name: 'PostgreSQL',     icon: <FaBrain /> },
+      { name: 'Node.js',    icon: <SiNodedotjs /> },
+      { name: 'Express.js', icon: <SiExpress /> },
+      { name: 'REST APIs',  icon: <FaServer /> },     // GET, POST, PATCH, DELETE
+      { name: 'PostgreSQL', icon: <SiPostgresql /> }, // relational database
+      { name: 'System Design', icon: <FaBrain /> },  // new next goal
     ]
   },
-    {
+  {
     title: 'Soft Skills',
     emoji: '🧠',
     skills: [
-      { name: 'Problem Solving',    icon: <HiLightBulb /> },
-      { name: 'Public Speaking',    icon: <AiFillAudio /> },
-      { name: 'Leadership',         icon: <HiFlag />  },
-      { name: 'Teamwork',           icon: <HiLink /> },
-      { name: 'Adaptability',       icon: <HiKey /> },
+      { name: 'Problem Solving', icon: <HiLightBulb /> },
+      { name: 'Public Speaking', icon: <AiFillAudio /> },
+      { name: 'Leadership',      icon: <HiFlag /> },
+      { name: 'Teamwork',        icon: <HiLink /> },
+      { name: 'Adaptability',    icon: <HiKey /> },
     ]
   },
 ];

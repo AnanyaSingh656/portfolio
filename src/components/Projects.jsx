@@ -5,20 +5,34 @@ import { FaGithub, FaExternalLinkSquareAlt } from 'react-icons/fa';
 // ── ADD YOUR PROJECTS HERE ──
 // To add a new project later, just copy one object and fill in your details
 // Leave github or demo as '' if DN have the link yet
+//Status: Completed, In Progress, Under Review, Coming Soon
 const projectsData = [
+{
+    title: 'Community Bulletin Board',
+    description:
+      'A full-stack web application that allows users to post their thoughts or view community announcements. Features include CRUD operations for posts, and a responsive design with storage in a database. Similar to a mini Reddit or a notice board.',
+    contribution: 'Built as an individual project. Developed the frontend, backend, and database integration.',
+    tech: ['React', 'Node.js', 'Express', 'PostgreSQL'],
+    github: 'https://github.com/AnanyaSingh656/Bulletin-board',
+    demo: 'https://bulletin-board-jade-eight.vercel.app/',
+    status: 'Completed',
+  },
+
   {
     title: 'Smart Hospital Management System',
     description:
-      'A full-stack web application for managing hospital operations including patient registration, appointments, and dashboards. Built as a team project with 4 students.',
+      'A full-stack web application for managing hospital operations with patient and doctor login and dashboard features. Includes user authentication and data management. Built as a team project with 4 students.',
     contribution:
-      'Built the frontend part of the landing page, login page and patient dashboard.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-    github: 'https://github.com/your-repo-link',  // ← replace with real link
+      'Built the frontend part of the landing page, login page and patient dashboard page.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express.js','REST APIs', 'PostgreSQL'],
+    github: 'https://github.com/Seshrut/HMS',  // replace with real link
     demo: '',           // ← add live link if hosted, else leave ''
     status: 'Under Review',
   },
+
+
   {
-    title: 'Smart Home Security System',
+    title: 'Home Security System',
     description:
       'An IoT-based home security system using ESP32 microcontroller that detects intrusions and sends instant SMS alerts to the homeowner.',
     contribution:
@@ -29,15 +43,27 @@ const projectsData = [
     status: 'In Progress',
   },
   {
-    title: 'Your Next Project',
+    title: 'Drones Decoded',
     description:
-      'This space is reserved for your upcoming project. Add the title, description, tech stack and links once it is ready!',
-    contribution: '',
-    tech: [],
-    github: '',
-    demo: '',
-    status: 'Coming Soon',
+      'Developed and deployed a live website for a college hackathon organized by the Vinnovate VIT student chapter under the theme "Drones Decoded". The platform was used for event participation and submissions, integrating Google Forms and QR codes for seamless user access. Built in a team of 2 students.',
+    contribution: 'Designing frontend, integrate Google Forms and QR code generation for participant management. Deployed using Vercel.',
+    tech: ['HTML', 'CSS','React', 'Google Forms'],
+    github: 'https://github.com/AnanyaSingh656/drones-decoded',
+    demo: 'https://drones-decoded.vercel.app/',
+    status: 'Completed',
   },
+
+  // {
+  //   title: 'My Next Project',
+  //   description:
+  //     'This space is reserved for my upcoming project. Add the title, description, tech stack and links once it is ready!',
+  //   contribution: '',
+  //   tech: [],
+  //   github: '',
+  //   demo: '',
+  //   status: 'Coming Soon',
+  // },
+  
 ];
 
 function Projects() {
